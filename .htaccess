@@ -1,6 +1,11 @@
-RewriteEngine On 
-RewriteCond %{HTTPS} off 
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteEngine On
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =""
+RewriteCond %{HTTPS} !=on
+
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 ErrorDocument 400 /400.html
 ErrorDocument 401 /401.html
