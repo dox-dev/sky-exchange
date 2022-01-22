@@ -1,0 +1,3 @@
+Contact: contact-skyexchange@protonmail.com
+PGP Public Key: /.well-known/publickey.txt
+Sign PGP Message: https://webencrypt.org/openpgpjs/__index.html
