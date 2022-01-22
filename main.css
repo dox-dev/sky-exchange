@@ -1,5 +1,14 @@
+/*
+    light-grey: #202020
+    grey: #181818
+    dark-grey: #0f0f0f
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
 body {
-    background-color: #292826;
+    margin: 0;
+    background-color: #181818;
 }
 
 .loader-wrapper {
@@ -12,6 +21,7 @@ body {
     display: grid;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .loader {
@@ -47,5 +57,44 @@ body {
       width: 72px;
       height: 72px;
       opacity: 0;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+  
+.navbar a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 18px 18px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+}
+  
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+.navbar-logo {
+    padding: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar a {
+        padding: 18px 15px;
     }
 }

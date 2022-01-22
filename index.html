@@ -10,13 +10,24 @@
     <title>SkyExchange | Decentralized Duino Coin Exchange</title>
 </head>
 <body>
+    <!-- Loading Screen -->
     <div class="loader-wrapper">
         <div class="loader"><div></div><div></div></div>
     </div>
 
+    <!-- NavBar -->
+    <nav>
+        <div class="navbar">
+            <img class="navbar-logo" src="/images/skyexchange-logo.png" alt="SkyExchange Logo" width="40px">
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
     <script>
         $(window).on("load", function() {
-            $(".loader-wrapper").delay(500).fadeOut("slow");
+            $(".loader-wrapper").delay(350).fadeOut("slow");
         });
     </script>
 </body>
