@@ -24,39 +24,45 @@ body {
     z-index: 1;
 }
 
-.loader {
-    display: inline-block;
+.spinner {
+    width: 40px;
+    height: 40px;
+  
     position: relative;
-    width: 80px;
-    height: 80px;
+    margin: 100px auto;
 }
   
-.loader div {
-    position: absolute;
-    border: 4px solid #fff;
-    opacity: 1;
+.double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    animation: loader 1.25s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    background-color: #9db2e2;
+    opacity: 0.75;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    -webkit-animation: sk-bounce 2s infinite ease-in-out;
+    animation: sk-bounce 2s infinite ease-in-out;
 }
   
-.loader div:nth-child(2) {
-    animation-delay: -0.5s;
+.double-bounce2 {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
 }
   
-@keyframes loader {
-    0% {
-      top: 36px;
-      left: 36px;
-      width: 0;
-      height: 0;
-      opacity: 1;
-    }
-    100% {
-      top: 0px;
-      left: 0px;
-      width: 72px;
-      height: 72px;
-      opacity: 0;
+@-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0) }
+    50% { -webkit-transform: scale(1) }
+}
+  
+@keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0);
+      -webkit-transform: scale(0);
+    } 50% { 
+      transform: scale(1);
+      -webkit-transform: scale(1);
     }
 }
 
@@ -66,7 +72,7 @@ body {
 
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: #202020c0;
     position: fixed;
     top: 0;
     width: 100%;
@@ -76,21 +82,30 @@ body {
 .navbar a {
     float: right;
     display: block;
-    color: #f2f2f2;
+    color: #ebebeb;
     text-align: center;
     padding: 18px 18px;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 17px;
+    border-radius: 6.5px;
+    transition: 0.45s;
 }
   
 .navbar a:hover {
-    background: #ddd;
-    color: black;
+    background: #698de0;
+    color: #131313;
 }
 
 .navbar-logo {
-    padding: 8px;
+    padding: 16px 0px 10px 16px;
+    width: 180px;
+    transition: 0.45s;
+    cursor: pointer;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.05);
 }
 
 @media only screen and (max-width: 600px) {
