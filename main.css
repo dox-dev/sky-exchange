@@ -108,6 +108,12 @@ body {
     transform: scale(1.05);
 }
 
+@media only screen and (max-width: 400px) {
+    .navbar a:nth-child(3) {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .navbar a {
         padding: 18px 15px;
