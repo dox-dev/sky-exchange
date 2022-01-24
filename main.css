@@ -4,17 +4,25 @@
     dark-grey: #0f0f0f
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
+    padding-top: 60px;
     margin: 0;
     background-color: #181818;
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
 }
 
 .loader-wrapper {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position:fixed;
     top: 0;
     left: 0;
     background-color: #6489DE;
@@ -72,7 +80,7 @@ body {
 
 .navbar {
     overflow: hidden;
-    background-color: #202020c0;
+    background-color: #202020ec;
     position: fixed;
     top: 0;
     width: 100%;
@@ -87,6 +95,7 @@ body {
     padding: 18px 18px;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
     font-size: 17px;
     border-radius: 6.5px;
     transition: 0.45s;
@@ -108,14 +117,69 @@ body {
     transform: scale(1.05);
 }
 
-@media only screen and (max-width: 400px) {
+.container {
+    padding-top: 45px;
+    padding-bottom: 85px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    place-items: center;
+}
+
+.bg-blue {
+    background-color: #698de0;
+}
+
+.bg-grey {
+    background-color: #202020;
+}
+
+.footer {
+    background: #0f0f0f;
+    color: white;
+    line-height: 50px;
+    padding: 20px 20px;
+    height: 220px;
+    display: flex;
+    flex-wrap: wrap;
+    place-items: center;
+    justify-content: center;
+    bottom: 0;
+}
+
+.footer > div {
+    margin: 50px;
+}
+
+.curved-div {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.curved-div svg {
+    display: block;
+}
+
+@media only screen and (max-width: 354px) {
     .navbar a:nth-child(3) {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .navbar a:nth-child(4) {
+        display: none;
+    }
+    .navbar-logo, .navbar a {
+        transition: 0.3s;
     }
 }
 
 @media only screen and (max-width: 600px) {
     .navbar a {
         padding: 18px 15px;
+    }
+    .navbar a:nth-child(2) {
+        display: none;
     }
 }
