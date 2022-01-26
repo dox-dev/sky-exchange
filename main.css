@@ -255,7 +255,7 @@ body {
   
 .footer__nav {
     display: flex;
-      flex-flow: row wrap;
+    flex-flow: row wrap;
 }
   
 .footer__nav > * {
@@ -411,7 +411,7 @@ textarea {
     margin: 5px;
 }
 
-.card-footer > a:nth-child(2), a:nth-child(3) {
+.card-footer > a:nth-child(2), .card-footer > a:nth-child(3) {
     transform: translateX(-7px);
 }
 
@@ -531,6 +531,44 @@ textarea {
     animation: pulse 500ms ease infinite alternate 250ms;
 }
 
+.trade-now-button {
+    font-family: 'Open Sans', sans-serif;
+    width: 280px;
+    background: transparent;
+    border: 3.75px #5f82d3 solid;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.35s;
+    font-weight: 400;
+}
+
+.trade-now-button:hover {
+    border: 3.75px #7899e4 solid;
+}
+
+.counter-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.counter-container .stats {
+    width: 32%;
+    margin: 75px 60px 75px 60px;
+    text-align: center;
+}
+
+.counter-container .stats h3 {
+    transform: translateY(-15px);
+}
+
+.counter-container .stats i {
+    transform: translateY(-20px);
+}
+
 @keyframes pulse {
     from {
       opacity: 0;
@@ -604,6 +642,9 @@ textarea {
     .scrolldown {
         transform: scale(0.7);
     }
+    .trade-now-button {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (max-width: 720px) {
@@ -621,12 +662,22 @@ textarea {
     .offer-title {
         margin-bottom: 10px;
     }
+    .counter-container {
+        display: block;
+    }
+    .counter-container .stats {
+        width: 100%;
+        margin: 0;
+    }
 }
 
 @media only screen and (max-width: 765px) {
     .about-div {
         display: grid;
         place-items: center;
+    }
+    .exchange-icon {
+        margin-top: -10px;
     }
 }
 
