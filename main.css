@@ -606,7 +606,7 @@ textarea {
 }
 
 @media only screen and (max-width: 430px) {
-    .navbar a:nth-child(4) {
+    .navbar a:nth-child(3) {
         display: none;
     }
     .navbar-logo, .navbar a {
@@ -667,7 +667,10 @@ textarea {
     }
     .counter-container .stats {
         width: 100%;
-        margin: 0;
+        margin: 15px 0 15px 0;
+    }
+    .counter-container .stats:nth-child(2) {
+        display: none;
     }
 }
 
