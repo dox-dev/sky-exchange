@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="/main.css">
     <link rel="shortcut icon" href="/images/favicon.ico">
     <title>SkyExchange | Decentralized Duino Coin Exchange</title>
@@ -34,10 +34,14 @@
     <main>
     <div class="content">
         <div class="container bg-grey curved-div" id="chart">
-            <h1 id="dynamic-text"><b>Chart</b></h1>
-            <h3 align="center" class="text-small">Current Duino-Coin Price<br>Based on our Marketplace</h3>
-            <canvas id="priceChart" style="width:100%; max-width:550px">Something went wrong :(</canvas>
-            <b>Current Price</b><span id="current-price"></span>
+            <h1 class="dynamic-text"><b>
+              I choose <a style="color: #698cdd !important;" class="typewrite" data-period="2000" 
+              data-type='[ "freedom.", "possibilities.", "SkyExchange." ]'>
+                <span class="wrap"></span>
+              </a>
+            </b></h1>
+            <h3 align="center" class="text-small">Decentralize</h3>
+            
             <div class='scrolldown'>
               <div class="chevrons">
                 <div class='chevrondown'></div>
@@ -175,41 +179,7 @@
             $("#current-year").text( (new Date).getFullYear() );
             $(".loader-wrapper").delay(650).fadeOut("slow");
         });
-
-        // Chart
-        var xValues = ['','','','','','',''];
-        var yValues = [0.0004,0.0003221136,0.000322,0.000332114,0.0004,0.0003221145,0.0003211];
-
-        $("#current-price").text( yValues[6] );
-
-        new Chart("priceChart", {
-          type: "line",
-          data: {
-            labels: xValues,
-            datasets: [{
-              fill: false,
-              lineTension: 0,
-              backgroundColor: "#698de0",
-              borderColor: "#698de0",
-              data: yValues
-            }]
-          },
-          options: {
-            legend: { display: false },
-            scales: {
-              yAxes: [{
-                ticks: {
-                  fontColor: "#e8e8e8"
-                }
-              }],
-              xAxes: [{
-                ticks: {
-                  fontColor: "#e8e8e8"
-                }
-              }]
-            }
-          }
-        });
     </script>
+    <script src="/script.js"></script>
 </body>
 </html>

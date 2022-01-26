@@ -5,6 +5,7 @@
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400');
 
 html {
@@ -20,6 +21,18 @@ body {
     font-weight: 500;
 }
 
+.dynamic-text {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+}
+
+.dynamic-text > a {
+    text-decoration: none;
+    color: #ffffff;
+    pointer-events: none;
+    cursor: default;
+}
+
 .loader-wrapper {
     width: 100%;
     height: 100%;
@@ -30,7 +43,7 @@ body {
     display: grid;
     align-items: center;
     justify-content: center;
-    z-index: 1;
+    z-index: 2;
 }
 
 .spinner {
@@ -100,7 +113,7 @@ body {
     top: 0;
     width: 100%;
     transition: all 0.45s;
-    z-index: 0;
+    z-index: 1;
 }
   
 .navbar a {
@@ -450,6 +463,7 @@ textarea {
     box-sizing: border-box;
     margin-bottom: 10px;
     margin-top: 25px;
+    z-index: 0;
 }
   
 .scrolldown::before {
@@ -465,6 +479,7 @@ textarea {
     animation: scrolldown-anim 2s infinite;
     box-sizing: border-box;
     box-shadow: 0px -5px 3px 1px #ffffff66;
+    z-index: 0;
 }
   
 @keyframes scrolldown-anim {
@@ -570,6 +585,7 @@ textarea {
     }
     .text-small {
         font-size: 13.5px;
+        font-weight: bold;
     }
     .contact-div {
         padding: 0 24px 60px 24px;
