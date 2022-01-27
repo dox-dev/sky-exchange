@@ -95,13 +95,11 @@ body {
 ::-webkit-scrollbar-track {
     background: #202020;
 }
-  
-  /* Handle */
+
 ::-webkit-scrollbar-thumb {
     background: #333333;
 }
-  
-  /* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
     background: #131313;
 }
@@ -368,7 +366,7 @@ textarea {
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
-    background-color: #303030;
+    background-color: #272727;
 }
 
 .card-mainbody {
@@ -392,7 +390,7 @@ textarea {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #303030;
+    background-color: #272727;
     border-top: 2px #c4c4c4 solid;
     -webkit-border-bottom-right-radius: 5px;
     -webkit-border-bottom-left-radius: 5px;
@@ -422,7 +420,7 @@ textarea {
 .new-offer-button {
     width: 700px;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    background: #303030;
+    background: #272727;
     border: 3px #5f82d3 solid;
     border-radius: 5px;
     cursor: pointer;
@@ -569,6 +567,10 @@ textarea {
     transform: translateY(-20px);
 }
 
+.swal2-popup {
+    font-size: 12.5px !important;
+}
+
 @keyframes pulse {
     from {
       opacity: 0;
@@ -661,6 +663,9 @@ textarea {
     }
     .offer-title {
         margin-bottom: 10px;
+    }
+    .scrolldown {
+        margin-top: 5px;
     }
     .counter-container {
         display: block;

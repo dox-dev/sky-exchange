@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/main.css">
     <link rel="shortcut icon" href="/images/favicon.ico">
     <title>SkyExchange | Decentralized Duino Coin Exchange</title>
@@ -39,7 +40,7 @@
                 <span class="wrap"></span>
               </a>
             </b></h1>
-            <button class="trade-now-button">Trade Now</button>
+            <button class="trade-now-button" onclick="location.href='/trade'">Trade Now</button>
             
             <div class="counter-container">
               <div class="stats">
@@ -50,12 +51,12 @@
               <div class="stats">
                 <h1><span class="counter">63,075</span></h1>
                 <h3>Trade Offers</h3>
-                <i class="fa fa-desktop"></i>
+                <i class="fas fa-handshake"></i>
               </div>
               <div class="stats">
                 <h1><span class="counter">12,218</span></h1>
                 <h3>Exchanges</h3>
-                <i class="fa fa-coffee"></i>
+                <i class="fas fa-exchange-alt"></i>
               </div>
             </div>
 
@@ -71,7 +72,7 @@
         </div>
 
         <div class="container bg-blue curved-div" id="about">
-            <h1><b>About <i class="fa fa-question-circle"></i></b></h1>
+            <h1><b>About <i class="fas fa-graduation-cap"></i></b></h1>
             <div class="about-div">
                 <h3 align="center" class="text-small">SkyExchange is a decentralized crypto exchange.<br>If you want to swap your coins<br>Then you've come to the right place!<br></h3>
                 <img class="exchange-icon" src="/images/exchange-icon.png">
@@ -85,11 +86,13 @@
             <h1><b>Contact <i class="fa fa-envelope"></i></b></h1>
             <h3 align="center" class="text-small">Do you have any questions? Need to contact us?<br>Feel free to leave us a message!</h3>
             <div class="contact-div">
-                <form>      
-                    <input name="name" type="text" class="feedback-input" placeholder="Name" />   
-                    <input name="email" type="text" class="feedback-input" placeholder="Email" />
-                    <textarea name="text" class="feedback-input" placeholder="Message"></textarea>
-                    <input type="submit" value="SEND"/>
+                <form action="javascript:sendMail();">      
+                    <input id="name" type="text" class="feedback-input" placeholder="Name" />   
+                    <input id="email" type="email" class="feedback-input" placeholder="Email" />
+                    <textarea id="message" class="feedback-input" placeholder="Message"></textarea>
+                    <button type="submit">
+                      SEND <i class="fas fa-paper-plane"></i>
+                    </button>
                 </form>
             </div>
             <svg viewBox="0 0 1440 319">
@@ -196,6 +199,14 @@
             $("#current-year").text( (new Date).getFullYear() );
             $(".loader-wrapper").delay(650).fadeOut("slow");
         });
+
+        // Contact Form
+        function sendMail() {
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var message = document.getElementById("message").value;
+          window.location.href = "mailto:mail@example.org?subject=SkyExchange Contact Form&body=Name: " + name + " Email: " + email + "\nMessage: " + message;
+        }
     </script>
     <script src="/script.js"></script>
 </body>
