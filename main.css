@@ -664,10 +664,11 @@ textarea {
     }
     .counter-container {
         display: block;
+        margin: 5px 0 0 0 !important;
     }
     .counter-container .stats {
         width: 100%;
-        margin: 15px 0 15px 0;
+        margin: 8px 0 0 0;
     }
     .counter-container .stats:nth-child(2) {
         display: none;
