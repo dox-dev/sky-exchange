@@ -25,11 +25,17 @@
             align-items: center;
             justify-items: center;
         }
+
+        @media only screen and (max-width: 600px) {
+            .main * {
+                font-size: 15px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="main">
-        <h2><b>Something went wrong :(</b><br>ERROR 400</h2>
+        <h2><b>It's always time for a coffee break.</b><br><span style="opacity: 0.45">ERROR 400 [BAD REQUEST]</span></h2>
     </div>
 </body>
 </html>

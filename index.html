@@ -41,6 +41,7 @@
               </a>
             </b></h1>
             <button class="trade-now-button" onclick="location.href='/trade'">Trade Now</button>
+            <h5 class="discord-trading"><a href="#">Or use our discord trading channel</a></h5>
             
             <div class="counter-container">
               <div class="stats">
@@ -72,10 +73,10 @@
         </div>
 
         <div class="container bg-blue curved-div" id="about">
-            <h1><b>About <i class="fas fa-graduation-cap"></i></b></h1>
+            <h1 class="fade-in"><b>About <i class="fas fa-graduation-cap"></i></b></h1>
             <div class="about-div">
-                <h3 align="center" class="text-small">SkyExchange is a decentralized crypto exchange.<br>If you want to swap your coins<br>Then you've come to the right place!<br></h3>
-                <img class="exchange-icon" src="/images/exchange-icon.png">
+                <h3 align="center" class="text-small fade-in">SkyExchange is a decentralized crypto exchange.<br>If you want to swap your coins<br>Then you've come to the right place!<br></h3>
+                <img class="exchange-icon fade-in" src="/images/exchange-icon.png">
             </div>
             <svg viewBox="0 0 1440 320">
                 <path fill="#202020" fill-opacity="1" d="M0,256L80,234.7C160,213,320,171,480,170.7C640,171,800,213,960,213.3C1120,213,1280,171,1360,149.3L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
@@ -83,8 +84,8 @@
         </div>
 
         <div class="container bg-grey curved-div" id="contact">
-            <h1><b>Contact <i class="fa fa-envelope"></i></b></h1>
-            <h3 align="center" class="text-small">Do you have any questions? Need to contact us?<br>Feel free to leave us a message!</h3>
+            <h1 class="fade-in"><b>Contact <i class="fa fa-envelope"></i></b></h1>
+            <h3 align="center" class="text-small fade-in">Do you have any questions? Need to contact us?<br>Feel free to leave us a message!</h3>
             <div class="contact-div">
                 <form action="javascript:sendMail();">      
                     <input id="name" type="text" class="feedback-input" placeholder="Name" />   
@@ -209,5 +210,6 @@
         }
     </script>
     <script src="/script.js"></script>
+    <script src="/observers.js"></script>
 </body>
 </html>

@@ -19,6 +19,7 @@ body {
     color: #ffffff;
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
+    overflow-x: hidden;
 }
 
 .dynamic-text {
@@ -542,6 +543,7 @@ textarea {
     padding-bottom: 10px;
     transition: all 0.35s;
     font-weight: 400;
+    margin-bottom: 0;
 }
 
 .trade-now-button:hover {
@@ -567,8 +569,41 @@ textarea {
     transform: translateY(-20px);
 }
 
+.counter-container .stats .counter {
+    animation-name: fadeIn;
+    animation-duration: 1.75s;
+    animation-delay: 0.75s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.35;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 400ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
 .swal2-popup {
     font-size: 12.5px !important;
+}
+
+.discord-trading {
+    margin-top: 7.5px;
+}
+
+.discord-trading a {
+    text-decoration: none;
+    color: #ffffff9c;
 }
 
 @keyframes pulse {
@@ -627,6 +662,9 @@ textarea {
         font-size: 13.5px;
         font-weight: bold;
     }
+    .content .container h1 {
+        font-size: 1.5em;
+    }
     .contact-div {
         padding: 0 24px 60px 24px;
     }
@@ -645,7 +683,13 @@ textarea {
         transform: scale(0.7);
     }
     .trade-now-button {
-        font-size: 20px;
+        font-size: 19px;
+    }
+    [type="submit"] {
+        font-size: 20px
+    }
+    .exchange-icon {
+        margin-top: -20px;
     }
 }
 
