@@ -89,6 +89,17 @@ body {
     }
 }
 
+.alert {
+    padding: 12.5px;
+    opacity: 0.55;
+    background-color: #6489DE;
+    color: white;
+    margin-bottom: 15px;
+    display: grid;
+    place-items: center;
+    margin-bottom: -5px;
+}
+
 ::-webkit-scrollbar {
     width: 3.25px;
 }
