@@ -90,7 +90,7 @@
             <h1 class="fade-in"><b>Contact <i class="fa fa-envelope"></i></b></h1>
             <h3 align="center" class="text-small fade-in">Do you have any questions? Need to contact us?<br>Feel free to leave us a message!</h3>
             <div class="contact-div">
-                <form action="javascript:sendMail();">      
+                <form>      
                     <input id="name" type="text" class="feedback-input" placeholder="Name" />   
                     <input id="email" type="email" class="feedback-input" placeholder="Email" />
                     <textarea id="message" class="feedback-input" placeholder="Message"></textarea>
@@ -114,9 +114,9 @@
           <h2>Contact</h2>
           
           <address>
-            hello@skyexchange.ga<br>
+            email@email.com<br>
                 
-            <a class="footer__btn" href="mailto:hello@skyexchange.ga"><b>Email Us</b></a>
+            <a class="footer__btn"><b>Email Us</b></a>
           </address>
         </div>
         
@@ -148,23 +148,23 @@
               </li> 
                 
               <li>
-                <a href="https://www.paypal.com/donate/?hosted_button_id=N9FL75WWJ8ADY" target="_blank">Donate</a>
+                <a href="#" target="_blank">Donate</a>
               </li>
 
               <li>
-                <a href="https://duinocoin.com" target="_blank">Duino-Coin</a>
+                <a href="#" target="_blank">Duino-Coin</a>
               </li>
               
               <li>
-                <a href="https://wallet.duinocoin.com" target="_blank">Web Wallet</a>
+                <a href="#" target="_blank">Web Wallet</a>
               </li>
               
               <li>
-                <a href="https://github.com/dox-dev/duino-coin-wallet" target="_blank">Wallet Extension</a>
+                <a href="#" target="_blank">Wallet Extension</a>
               </li>
               
               <li>
-                <a href="https://duinocoin.com/team" target="_blank">Duino-Coin Team</a>
+                <a href="#" target="_blank">Duino-Coin Team</a>
               </li>
             </ul>
           </li>
@@ -203,14 +203,6 @@
             $("#current-year").text( (new Date).getFullYear() );
             $(".loader-wrapper").delay(650).fadeOut("slow");
         });
-
-        // Contact Form
-        function sendMail() {
-          var name = document.getElementById("name").value;
-          var email = document.getElementById("email").value;
-          var message = document.getElementById("message").value;
-          window.location.href = "mailto:mail@example.org?subject=SkyExchange Contact Form&body=Name: " + name + " Email: " + email + "\nMessage: " + message;
-        }
     </script>
     <script src="/script.js"></script>
     <script src="/observers.js"></script>
